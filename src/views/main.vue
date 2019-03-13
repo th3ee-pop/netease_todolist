@@ -100,7 +100,7 @@
 }
 
 .close::before {
-    icon-font: url("../components/cloud-ui/u-icon.vue/icons/close.svg");
+    icon-font: url("../assets/close.svg");
     font-size: 10px;
 }
     .loading {
