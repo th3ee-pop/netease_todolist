@@ -121,6 +121,7 @@ export default {
             status: 'all',
             loading: false,
             incompleted: 0,
+            url: 'http://202.117.54.45:8081/',
         };
     },
     methods: {
@@ -131,7 +132,7 @@ export default {
             } else {
                 const data = { item_name: this.newItem, item_date: this.time };
                 this.loading = true;
-                await this.$http.post('http://202.117.54.45:8081/oa/todolist', JSON.stringify(data)).then((res) => {
+                await this.$http.post(this.url + 'oa/todolist', JSON.stringify(data)).then((res) => {
                     console.log(res);
                 }, (err) => {
                     console.log(err);
@@ -142,7 +143,7 @@ export default {
             }
         },
         async getItems(status) {
-            await this.$http.get(`http://202.117.54.45:8081/oa/todolist/${this.time}/${status}`)
+            await this.$http.get(`${this.url}oa/todolist/${this.time}/${status}`)
                 .then((res) => {
                     this.incompleted = res.body.inCompleted;
                     this.items = res.body.data.map((item) => {
@@ -170,20 +171,20 @@ export default {
             this.getItems('all');
         },
         async deleteItem(id) {
-            await this.$http.delete(`http://202.117.54.45:8081/oa/todolist/${id}`)
+            await this.$http.delete(`${this.url}oa/todolist/${id}`)
                 .then((res) => {
                     console.log(res);
                 });
             this.getItems(this.status);
         },
         async updateItem(id, value) {
-            await this.$http.put(`http://202.117.54.45:8081/oa/todolist/${id}/${value ? '1' : '0'}`).then((res) => {
+            await this.$http.put(`${this.url}oa/todolist/${id}/${value ? '1' : '0'}`).then((res) => {
                 console.log(res);
             });
             this.getItems(this.status);
         },
         async deleteCompleted() {
-            await this.$http.delete(`http://202.117.54.45:8081/oa/delete_completed/${this.time}`)
+            await this.$http.delete(`${this.url}oa/delete_completed/${this.time}`)
                 .then((res) => {
                     console.log(res);
                 });
