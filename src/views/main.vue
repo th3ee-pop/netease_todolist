@@ -33,7 +33,7 @@
 
 <style module>
 .banner {
-    height: 480px;
+    height: 2000px;
     background: #f0f6fa;
     color: #676975;
 }
@@ -66,7 +66,9 @@
     margin-bottom: 20px;
 }
 
+
 .subtitle {
+    text-align: center;
     font-size: 28px;
     font-weight: normal;
     margin: 0;

@@ -4,13 +4,6 @@
         <div :class="$style.wrap">
             <u-logo :class="$style.left"></u-logo>
             <u-navbar>
-                <u-navbar-item to="/overview">Overview</u-navbar-item>
-                <u-navbar-item to="/basic">Basic</u-navbar-item>
-                <u-navbar-item to="/form">Form</u-navbar-item>
-                <div :class="$style.right">
-                    <u-navbar-item href="https://vusion.github.io" target="_blank">文档</u-navbar-item>
-                    <u-navbar-item href="https://github.com/vusion" target="_blank">GitHub</u-navbar-item>
-                </div>
             </u-navbar>
         </div>
     </header>

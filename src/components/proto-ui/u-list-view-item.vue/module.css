@@ -1,0 +1,32 @@
+.root {
+    /* @Private */
+    cursor: $cursor-pointer;
+
+    /* @Public */
+    padding: 4px 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid gainsboro;
+}
+
+.root:hover {
+    background: gainsboro;
+}
+
+.root[readonly] {
+    cursor: default;
+    background: none;
+}
+
+
+.root[disabled] {
+    /* @Private */
+    cursor: $cursor-not-allowed;
+    background: none;
+    color: $brand-disabled;
+}
+
+.root[selected][disabled] {
+    background: $gray-lighter;
+}

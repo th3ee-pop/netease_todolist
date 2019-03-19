@@ -1,0 +1,24 @@
+.root {
+    /* @Private */
+    user-select: none;
+    overflow: auto;
+    position: relative;
+
+    /* @Public */
+    background: white;
+    border: 1px solid $border-color-base;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.root:focus {
+    outline: $focus-outline;
+}
+
+.status {
+    color: $gray-dark;
+    text-align: center;
+}
