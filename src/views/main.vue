@@ -25,7 +25,10 @@
                 <a :class="$style.close" @click="deleteItem(item.id)" title="删除">
                 </a>
             </u-list-view-item>
+            <footer :class="$style.footer" v-if="items.length > 0">
+            </footer>
         </u-list-view>
+
         <u-block v-if="items.length === 0">暂无事项</u-block>
     </div>
 </section>
@@ -66,6 +69,24 @@
     margin-bottom: 20px;
 }
 
+.footer {
+    color: #777;
+    padding: 0 5px;
+    height: 5px;
+    text-align: left;
+    border-top: 1px solid #e6e6e6;
+}
+
+.footer:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),              0 8px 0 -3px #f6f6f6,              0 9px 1px -3px rgba(0, 0, 0, 0.2),              0 16px 0 -6px #f6f6f6,              0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
 
 .subtitle {
     text-align: center;
