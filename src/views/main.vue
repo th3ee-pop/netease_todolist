@@ -1,7 +1,7 @@
 <template>
 <section :class="$style.banner">
     <div :class="$style.bannerContent">
-        <h2 :class="$style.subtitle">th3ee的备忘录</h2>
+        <h2 :class="$style.subtitle">TODO3</h2>
     </div>
     <div :class="$style.bannerList">
         <div :class="$style.flexRightDiv">
@@ -49,7 +49,7 @@
 .bannerContent {
     width: 680px;
     margin: 0 auto;
-    padding: 80px;
+    padding: 45px;
 }
 
 .bannerList {
@@ -89,8 +89,9 @@
 }
 
 .subtitle {
+    color:#1ba67e61;
     text-align: center;
-    font-size: 28px;
+    font-size: 45px;
     font-weight: normal;
     margin: 0;
 }
